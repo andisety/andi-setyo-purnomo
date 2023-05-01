@@ -5,6 +5,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script
+      src="https://code.jquery.com/jquery-3.6.4.slim.js"
+      integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4="
+      crossorigin="anonymous"
+    ></script>
+    <script
       async
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2021886573271718"
       crossorigin="anonymous"
@@ -20,7 +25,7 @@
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
 
     <title>Andi Setyo Purnomo</title>
@@ -29,7 +34,7 @@
   <body id="home">
     <!-- navbar -->
     <nav
-      class="navbar navbar-expand-lg navbar-dark bg-primary shadow fixed-top"
+      class="navbar navbar-expand-lg navbar-dark bg-primary shadow fixed-top d-none"
       id="navbar"
     >
       <div class="container">
@@ -70,10 +75,10 @@
     </nav>
     <!-- navbar akhir -->
 
-    <section id="profile" class="mt-5">
+    <section id="profile" class="">
       <div class="container mb-5">
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-md-5 text-center">
             <img
               src="img/hero.jpg"
               alt="andi setyo purnomo"
@@ -83,23 +88,12 @@
           </div>
           <div class="col-md-7">
             <div class="awal">
-              <div id="typing">I'M <span>ANDI SETYO PURNOMO</span></div>
-              <div id="crow">|</div>
+              <h1>I'M</h1>
+              <div id="typing"><span>ANDI SETYO PURNOMO</span></div>
             </div>
           </div>
         </div>
       </div>
-      <svg
-        class="wave"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 320"
-      >
-        <path
-          fill="#fff"
-          fill-opacity="1"
-          d="M0,128L40,138.7C80,149,160,171,240,160C320,149,400,107,480,117.3C560,128,640,192,720,213.3C800,235,880,213,960,186.7C1040,160,1120,128,1200,101.3C1280,75,1360,53,1400,42.7L1440,32L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
-        ></path>
-      </svg>
     </section>
 
     <!-- about -->
@@ -114,7 +108,7 @@
         <div class="row fs-5">
           <div class="col-md-5">
             <img
-              src="img/hero.jpg"
+              src="img/hero_2.jpg"
               alt="andi setyo purnomo"
               class="img-thumbnail text-center"
             />
@@ -163,189 +157,259 @@
     <!-- akhir about -->
 
     <!-- certified -->
-    <section id="certified" style="background-color: #bfe6e6">
+    <section id="certificate" style="background-color: #bfe6e6">
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>MyCertificate</h2>
+            <h2 class="mb-5">MyCertificate</h2>
+            <div id="mycontainerBtn">
+              <button
+                type="button"
+                class="btn btn-outline-primary rounded-pill"
+                onclick="filterSelection('all')"
+              >
+                All
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-primary rounded-pill"
+                onclick="filterSelection('mobile')"
+              >
+                Mobile
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-primary rounded-pill"
+                onclick="filterSelection('web')"
+              >
+                Web
+              </button>
+            </div>
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="img/1.jpg" class="card-img-top" alt="certified 1" />
-              <div class="card-body" style="border: 2px solid white">
-                <p class="card-text">
-                  Certificate from Progate course HTML & CSS
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3 filterDiv mobile">
             <div class="card">
               <img
-                src="img/progate_php.png"
-                class="card-img-top"
-                alt="certified php"
+                src="img/kotlin-1.jpg"
+                alt="Gambar Contoh"
+                class="gambar"
+                data-bs-target="#exampleModal"
+                data-bs-toggle="modal"
               />
-              <div class="card-body" style="border: 2px solid white">
-                <p class="card-text">Certificate from Progate course PHP</p>
+              <div class="caption">
+                Memulai Pemrogaman dengan Kotlin by Dicoding
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+
+          <div class="col-md-4 mb-3 filterDiv mobile">
             <div class="card">
               <img
-                src="img/progate_javascript.png"
-                class="card-img-top"
-                alt="certified js"
+                src="img/android pemula-1.jpg"
+                alt="Gambar Contoh"
+                class="gambar"
+                data-bs-target="#exampleModal"
+                data-bs-toggle="modal"
               />
-              <div class="card-body" style="border: 2px solid white">
-                <p class="card-text">
-                  Certificate from Progate course Javascript
-                </p>
+              <div class="caption">
+                Belajar Membuat Aplikasi Android untuk Pemula by Dicoding
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+
+          <div class="col-md-4 mb-3 filterDiv mobile">
             <div class="card">
               <img
-                src="img/progate_sql.png"
-                class="card-img-top"
-                alt="certified sql"
+                src="img/android fundamental-1.jpg"
+                alt="Gambar Contoh"
+                class="gambar"
+                data-bs-target="#exampleModal"
+                data-bs-toggle="modal"
               />
-              <div class="card-body" style="border: 2px solid white">
-                <p class="card-text">Certificate from Progate course SQL</p>
+              <div class="caption">
+                Belajar Fundamental Aplikasi Android by Dicoding
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+
+          <div class="col-md-4 mb-3 filterDiv mobile">
+            <div class="card">
+              <img
+                src="img/android intermediaet-1.jpg"
+                alt="Gambar Contoh"
+                class="gambar"
+                data-bs-target="#exampleModal"
+                data-bs-toggle="modal"
+              />
+              <div class="caption">
+                Belajar Pengembangan Aplikasi Android Intermediaet by Dicoding
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 filterDiv mobile">
+            <div class="card">
+              <img
+                src="img/android jepack compose-1.jpg"
+                alt="Gambar Contoh"
+                class="gambar"
+                data-bs-target="#exampleModal"
+                data-bs-toggle="modal"
+              />
+              <div class="caption">
+                Belajar Membuat Aplikasi Android dengan Jetpack Compose by
+                Dicoding
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 filterDiv mobile">
+            <div class="card">
+              <img
+                src="img/ux-1.jpg"
+                alt="Gambar Contoh"
+                class="gambar"
+                data-bs-target="#exampleModal"
+                data-bs-toggle="modal"
+              />
+              <div class="caption">Belajar Dasar UX Design by Dicoding</div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 filterDiv mobile">
+            <div class="card">
+              <img
+                src="img/solid-1.jpg"
+                alt="Gambar Contoh"
+                class="gambar"
+                data-bs-target="#exampleModal"
+                data-bs-toggle="modal"
+              />
+              <div class="caption">
+                Belajar Prinsip Pemrograman SOLID by Dicoding
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 filterDiv web">
             <div class="card">
               <img
                 src="img/dicoding_dasar_web.png"
-                class="card-img-top"
-                alt="certified dicoding web dasar"
+                alt="Gambar Contoh"
+                class="gambar"
+                data-bs-target="#exampleModal"
+                data-bs-toggle="modal"
               />
-              <div class="card-body" style="border: 2px solid white">
-                <p class="card-text">
-                  Certificate from Dicoding Belajar Dasar Web
-                </p>
+              <div class="caption">
+                Belajar Dasar Pemrograman Web by Dicoding
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+
+          <div class="col-md-4 mb-3 filterDiv web">
             <div class="card">
               <img
                 src="img/dicoding_pemula_web.png"
-                class="card-img-top"
-                alt="certified dicoding web dasar"
+                alt="Gambar Contoh"
+                class="gambar"
+                data-bs-target="#exampleModal"
+                data-bs-toggle="modal"
               />
-              <div class="card-body" style="border: 2px solid white">
-                <p class="card-text">
-                  Certificate from Dicoding Belajar Front-End Web Pemula
-                </p>
+              <div class="caption">
+                Belajar Front-End Web Pemula by Dicoding
               </div>
             </div>
           </div>
 
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3 filterDiv web">
             <div class="card">
               <img
-                src="img/kotlin.png"
-                class="card-img-top"
-                alt="certified dicoding web dasar"
+                src="img/progate_html.jpg"
+                alt="Gambar Contoh"
+                class="gambar"
+                data-bs-target="#exampleModal"
+                data-bs-toggle="modal"
               />
-              <div class="card-body" style="border: 2px solid white">
-                <p class="card-text">
-                  Certificate from Dicoding Memulai Pemrogaman dengan Kotlin
-                </p>
-              </div>
+              <div class="caption">Kursus HTML & CSS by Progate</div>
             </div>
           </div>
 
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3 filterDiv web">
             <div class="card">
               <img
-                src="img/dicoding_android_pemula.png"
-                class="card-img-top"
-                alt="certified dicoding web dasar"
+                src="img/progate_javascript.png"
+                alt="Gambar Contoh"
+                class="gambar"
+                data-bs-target="#exampleModal"
+                data-bs-toggle="modal"
               />
-              <div class="card-body" style="border: 2px solid white">
-                <p class="card-text">
-                  Certificate from Dicoding Aplikasi Android Pemula
-                </p>
-              </div>
+              <div class="caption">Kursus JavaScript by Progate</div>
             </div>
           </div>
 
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3 filterDiv web">
             <div class="card">
               <img
-                src="img/dicoding_android_fundamental.png"
-                class="card-img-top"
-                alt="certified dicoding web dasar"
+                src="img/progate_php.png"
+                alt="Gambar Contoh"
+                class="gambar"
+                data-bs-target="#exampleModal"
+                data-bs-toggle="modal"
               />
-              <div class="card-body" style="border: 2px solid white">
-                <p class="card-text">
-                  Certificate from Dicoding Aplikasi Android Pemula
-                </p>
-              </div>
+              <div class="caption">Kursus PHP by Progate</div>
             </div>
           </div>
 
-          <div class="col-md-4 mb 3">
+          <div class="col-md-4 mb-3 filterDiv web">
             <div class="card">
-              <img src="img/2.jpg" class="card-img-top" alt="certified 2" />
-              <div class="card-body">
-                <p class="card-text">Certified from Solo Learn course CSS</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="img/3.jpg" class="card-img-top" alt="certified 3" />
-              <div class="card-body">
-                <p class="card-text">Certified from Solo Learn course HTML</p>
-              </div>
+              <img
+                src="img/progate_php.png"
+                alt="Gambar Contoh"
+                class="gambar"
+                data-bs-target="#exampleModal"
+                data-bs-toggle="modal"
+              />
+              <div class="caption">Kursus SQL by Progate</div>
             </div>
           </div>
 
-          <div class="col-md-4 mb-3">
-            <div class="card">
-              <img src="img/4.jpg" class="card-img-top" alt="certified 4" />
-              <div class="card-body">
-                <p class="card-text">
-                  Certified from BitDegree course HTML & CSS
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3 filterDiv web">
             <div class="card">
               <img
-                src="img/IMG_8938.jpg"
-                class="card-img-top"
-                alt="certified bnsp"
+                src="img/sololearn_html.jpg"
+                alt="Gambar Contoh"
+                class="gambar"
+                data-bs-target="#exampleModal"
+                data-bs-toggle="modal"
               />
-              <div class="card-body">
-                <p class="card-text">
-                  Certified from BNSP Junior Web Developer
-                </p>
-              </div>
+              <div class="caption">Kursus HTML by Solo Learn</div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+
+          <div class="col-md-4 mb-3 filterDiv web">
             <div class="card">
               <img
-                src="img/jmp.jpg"
-                class="card-img-top"
-                alt="certified bnsp"
+                src="img/sololearn_css.jpg"
+                alt="Gambar Contoh"
+                class="gambar"
+                data-bs-target="#exampleModal"
+                data-bs-toggle="modal"
               />
-              <div class="card-body">
-                <p class="card-text">
-                  Certified from BNSP Junior Mobile Developer
-                </p>
-              </div>
+              <div class="caption">Kursus CSS by Solo Learn</div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3 filterDiv web">
+            <div class="card">
+              <img
+                src="img/bitdegree_htmlcss.jpg"
+                alt="Gambar Contoh"
+                class="gambar"
+                data-bs-target="#exampleModal"
+                data-bs-toggle="modal"
+              />
+              <div class="caption">Kursus HTML CSS by Bitdegree</div>
             </div>
           </div>
         </div>
@@ -371,7 +435,7 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3">
-            <div class="project-tile">
+            <div class="project-tile shadow-lg">
               <img
                 src="img/project/github.jpg"
                 class="card-img-top"
@@ -390,7 +454,7 @@
           </div>
 
           <div class="col-md-4 mb-3">
-            <div class="project-tile">
+            <div class="project-tile shadow-lg">
               <img
                 src="img/project/epatrol.jpg"
                 class="card-img-top"
@@ -398,7 +462,10 @@
               />
               <div class="card-body">
                 <h5 class="card-title">EPATROL App</h5>
-                <a href="#" target="_blank" class="btn btn-primary"
+                <a
+                  href="https://github.com/andisety/E-Patrol"
+                  target="_blank"
+                  class="btn btn-primary"
                   >Detail Project</a
                 >
               </div>
@@ -406,7 +473,7 @@
           </div>
 
           <div class="col-md-4 mb-3">
-            <div class="project-tile">
+            <div class="project-tile shadow-lg">
               <img
                 src="img/project/protectme.jpg"
                 class="card-img-top"
@@ -425,7 +492,7 @@
           </div>
 
           <div class="col-md-4 mb-3">
-            <div class="project-tile">
+            <div class="project-tile shadow-lg">
               <img
                 src="img/project/weatherAPp.jpg"
                 class="card-img-top"
@@ -444,7 +511,7 @@
           </div>
 
           <div class="col-md-4 mb-3">
-            <div class="project-tile">
+            <div class="project-tile shadow-lg">
               <img
                 src="img/project/adminperpus.jpg"
                 class="card-img-top"
@@ -562,14 +629,70 @@
 
     <!-- footer -->
     <footer class="bg-primary text-white text-center p-3">
+      <div class="row justify-content-center mb-3">
+        <div class="col-1">
+          <a href="https://www.instagram.com/andisetyo_p/" target="_blank"
+            ><h1><i class="bi bi-instagram text-light"></i></h1
+          ></a>
+        </div>
+        <div class="col-1">
+          <a href="https://www.facebook.com/setyo.andi.90" target="_blank"
+            ><h1><i class="bi bi-facebook text-light"></i></h1
+          ></a>
+        </div>
+        <div class="col-1">
+          <a
+            href="https://api.whatsapp.com/send/?phone=6283866516952&text&type=phone_number&app_absent=0"
+            target="_blank"
+            ><h1><i class="bi bi-whatsapp text-light"></i></h1
+          ></a>
+        </div>
+        <div class="col-1">
+          <a href="https://github.com/andisety" target="_blank"
+            ><h1><i class="bi bi-github text-light"></i></h1
+          ></a>
+        </div>
+        <div class="col-1">
+          <a
+            href="https://www.linkedin.com/in/andi-setyo-purnomo/"
+            target="_blank"
+            ><h1><i class="bi bi-linkedin text-light"></i></h1
+          ></a>
+        </div>
+        <div class="col-1">
+          <a href="mailto:purnomoandi126@gmail.com" target="_blank"
+            ><h1><i class="bi bi-envelope-at text-light"></i></h1
+          ></a>
+        </div>
+      </div>
+
       <p>
-        Created with <i class="bi bi-suit-heart-fill text-danger"></i> by
-        <a href="http://instagram.com/andisetyo_p/" class="text-white fw-bold"
-          >Andi Setyo Purnomo</a
-        >
+        Created with <i class="bi bi-suit-heart-fill text-danger"></i> by Andi
+        Setyo Purnomo
       </p>
     </footer>
     <!-- akhir footer -->
+
+    <!-- modal -->
+    <div class="modal" id="exampleModal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-12-md">
+                <img
+                  class="img-certificate img-fluid"
+                  src=""
+                  alt="certificate"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
@@ -577,6 +700,19 @@
       crossorigin="anonymous"
     ></script>
     <script>
+      // Ambil semua gambar pada halaman
+      const images = document.getElementsByTagName("img");
+
+      // Loop melalui setiap gambar dan tambahkan event listener
+      for (var i = 0; i < images.length; i++) {
+        images[i].addEventListener("click", function () {
+          // Get the src of the clicked image
+          var src = this.getAttribute("src");
+          var imgModal = document.querySelector(".img-certificate");
+          imgModal.src = src;
+        });
+      }
+
       const scriptURL =
         "https://script.google.com/macros/s/AKfycbw3i3jlrV4gJO1LCwqozUbc91wlNh7wm0XZ7NUGjvTO-6yoyOIH7WpkzCT11OzeQMCiPw/exec";
       const form = document.forms["contact-form"];

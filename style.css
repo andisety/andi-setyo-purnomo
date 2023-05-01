@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 html{
   scroll-behavior: smooth !important;
 }
@@ -26,6 +28,7 @@ color: #17e2e2;
   left: 0;
 }
 
+
 section {
   padding-top: 5rem;
 }
@@ -36,7 +39,6 @@ section {
   float: left;
   font-size: 70px;
   margin: 0 auto;
-  padding: 10px;
   overflow: hidden;
   white-space: nowrap;
   animation: typing 7s steps(24) 1s infinite;
@@ -46,13 +48,27 @@ section {
   color: #000000;
 }
 
-#crow {
-  float: left;
-  margin-top: 10px;
-  color: #000000;
-  font-size: 70px;
-  animation: crow 0.5s linear 0s infinite;
-}
+ .gambar {
+   display: block;
+   max-width: 100%;
+   height: auto;
+ }
+
+ .caption {
+  font-family: 'Poppins';
+   color: white;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   background-color: rgba(0, 15, 17, 0.6);
+   padding: 10px;
+   font-size: 12px;
+ }
+
+ 
+
+
 
 @keyframes typing {
   from {
@@ -60,28 +76,19 @@ section {
   }
 
   to {
-    width: 1024px;
-  }
+    width: 800px}
 }
 
-@keyframes crow {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
 
 @media (max-width: 576px) {
+
   @keyframes typing {
       from {
         width: 0;
       }
   
       to {
-        width: 576px;
+        width: 340px !important;
       }
     }
   .navbar {
@@ -90,8 +97,39 @@ section {
   #typing{
     font-size: 30px;
   }
-    #crow {
-      font-size: 50px;
-    }
+
     
+}
+@media (min-width: 768px) {
+#profile {
+    height: 60vh;
+  }
+}
+@media (min-width: 1024px) {
+  #profile {
+    height: 100vh;
+  }
+}
+
+@media (max-width: 992px) {
+    
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 400px;
+    }
+  }
+
+  .navbar {
+    background-color: black !important;
+  }
+
+  #typing {
+    font-size: 30px;
+  }
+
+
 }

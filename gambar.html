@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contoh Gambar dengan Keterangan</title>
+    <style>
+      .container {
+        position: relative;
+        width: 400px;
+        height: 400px;
+      }
+
+      .gambar {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .caption {
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(8, 24, 255, 0.6);
+        padding: 10px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="img/dicoding_android_fundamental.png"
+        alt="Gambar Contoh"
+        class="gambar"
+      />
+      <div class="caption">
+        Certificate from Dicoding Memulai Pemrogaman dengan Kotlin
+      </div>
+    </div>
+  </body>
+</html>
