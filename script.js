@@ -19,8 +19,10 @@ function filterSelection(c) {
   for (i = 0; i < x.length; i++) {
     w3AddClass(x[i], "d-none")
     
-    if (x[i].className.indexOf(c) > -1) w3RemoveClass(x[i], "d-none");;
-  }
+    if (x[i].className.indexOf(c) > -1) 
+        w3RemoveClass(x[i], "d-none");;
+    
+    }
 }
 
 // Show filtered elements
